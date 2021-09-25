@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+@font-face{
+  font-family: avenir-regular;
+  src: url('./assets/fonts//avenir-font/AvenirLTStd-Book.otf');
+}
+@font-face{
+  font-family: avenir-medium;
+  src: url('./assets/fonts//avenir-font/AvenirLTStd-Medium.otf');
+}
+@font-face{
+  font-family: avenir-bold;
+  src: url('./assets/fonts//avenir-font/AvenirLTStd-Black.otf');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: avenir-regular;
+  font-size: 12px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media print {
+  body {
+    margin: 1cm;
+    margin-bottom: 0;
+  }
+
+  .App {
+    margin-top: 1.5cm;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media screen {
+  .App {
+    margin-top: 24px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.my-name {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.role {
+  margin: 0;
+  font-weight: bold;
+  margin-bottom: 4;
+  font-size: 1rem;
+}
+
+.company {
+  margin: 0;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.duration-location {
+  margin-bottom: 4px;
+}
+
+.material-icons {
+  font-size: 1rem;
+}
+
+.Experience {
+  margin-bottom: 24px;
+}
+
+section {
+  margin-bottom: 24px;
+}
+
+.flex-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  padding-bottom: 2px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  border-bottom: 2px solid black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ .subtitle {
+   font-size: 10px;
+   font-weight: bold;
+   margin-bottom: 8px;
+   margin-top: 16px;
+ }
+
+ul {
+  margin-top: 8px;
+  padding-left: 1rem;
+}
+
+ul li {
+  margin-bottom: 8px;
 }
