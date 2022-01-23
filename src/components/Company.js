@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Experience({ from, to, location, role, company, ...props }) {
+export function Company({ from, to, location, role, company, ...props }) {
   return (
     <div className="Experience">
       <div>

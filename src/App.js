@@ -2,13 +2,12 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import { Heading } from "./components/Heading";
 import { Skill } from "./components/Skill";
-import { Experience } from "./components/Experience";
+import { Company as Company } from "./components/Company";
 import { Education } from "./components/Education";
 
 function App() {
   return (
     <div className="App">
-      {/* <Heading /> */}
       <div
         className="flex-container"
         style={{ justifyContent: "space-between" }}
@@ -57,17 +56,8 @@ function LeftContent() {
         </div>
       </section>
 
-      <section>
-        <div className="title">
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <div>
-              <i class="material-icons">work</i>
-            </div>
-            &nbsp;
-            <div>Work Experience</div>
-          </div>
-        </div>
-        <Experience
+      <WorkExperience>
+        <Company
           company="Janaspandana"
           location="Kondapur, Hyderabad"
           from="2018"
@@ -109,9 +99,9 @@ function LeftContent() {
               tech="PHP, Laravel, Flutter, Android, React"
             />
           </Projects>
-        </Experience>
+        </Company>
 
-        <Experience
+        <Company
           company="Powern Solutions"
           location="ECIL, Hyderabad"
           from="2016"
@@ -131,8 +121,8 @@ function LeftContent() {
               tech="PHP, CodeIgniter, MySQL, Javascript, Java, Python"
             />
           </Projects>
-        </Experience>
-      </section>
+        </Company>
+      </WorkExperience>
 
       <section>
         <div>
@@ -176,10 +166,27 @@ function LeftContent() {
   );
 }
 
+function WorkExperience(props) {
+  return (
+    <section>
+      <div className="title">
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <div>
+            <i class="material-icons">work</i>
+          </div>
+          &nbsp;
+          <div>Work Experience</div>
+        </div>
+      </div>
+      {props.children}
+    </section>
+  );
+}
+
 function Projects({ children }) {
   return (
     <React.Fragment>
-      <p style={{ marginBottom: 0, marginTop: '2px' }}>
+      <p style={{ marginBottom: 0, marginTop: "2px" }}>
         <b>Projects</b>
       </p>
       <ul>{children}</ul>
@@ -224,16 +231,15 @@ function RightContent() {
             <div>Skills</div>
           </div>
         </div>
+
         <div>
-          <div className="subtitle"> - PROGRAMMING LANGUAGES</div>
-          <Skill name="Javascript" rating={11} />
-          <Skill name="Typescript" rating={11} />
-          <Skill name="Java" rating={11} />
-          <Skill name="Python" rating={9} />
-          <Skill name="PHP" rating={10} />
-          <Skill name="Dart" rating={11} />
-          <Skill name="SQL" rating={10} />
-          <Skill name="HTML5/CSS3" rating={11} />
+          <div className="subtitle"> - BACKEND TECHNOLOGIES</div>
+          <Skill name="NodeJS" rating={11} />
+          <Skill name="ExpressJS" rating={11} />
+          <Skill name="NestJS" rating={11} />
+          <Skill name="Laravel" rating={10} />
+          {/* <Skill name="Java Spring" rating={10} /> */}
+          <Skill name="Django" rating={9} />
         </div>
 
         <div>
@@ -245,20 +251,22 @@ function RightContent() {
         </div>
 
         <div>
-          <div className="subtitle"> - BACKEND TECHNOLOGIES</div>
-          <Skill name="NodeJS" rating={11} />
-          <Skill name="ExpressJS" rating={11} />
-          <Skill name="NestJS" rating={11} />
-          <Skill name="Laravel" rating={10} />
-          <Skill name="Java Spring" rating={10} />
-          <Skill name="Django" rating={9} />
-        </div>
-
-        <div>
           <div className="subtitle"> - DATABASE TECHNOLOGIES</div>
           <Skill name="MySQL" rating={10} />
           <Skill name="MongoDB" rating={9} />
           <Skill name="Firebase" rating={10} />
+        </div>
+
+        <div>
+          <div className="subtitle"> - PROGRAMMING LANGUAGES</div>
+          <Skill name="Javascript" rating={11} />
+          <Skill name="Typescript" rating={11} />
+          <Skill name="Python" rating={9} />
+          <Skill name="PHP" rating={10} />
+          <Skill name="Java" rating={10} />
+          <Skill name="Dart" rating={11} />
+          <Skill name="SQL" rating={10} />
+          <Skill name="HTML5/CSS3" rating={11} />
         </div>
 
         <div>
